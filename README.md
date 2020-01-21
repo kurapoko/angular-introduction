@@ -1,5 +1,7 @@
 # AngularIntroduction
 
+[Angular超入門](https://www.amazon.co.jp/Angular%E8%B6%85%E5%85%A5%E9%96%80-%E6%8E%8C%E7%94%B0-%E6%B4%A5%E8%80%B6%E4%B9%83/dp/4798057738)の学習記録を管理するリポジトリです。
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
 ## Development server
