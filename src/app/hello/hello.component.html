@@ -1,42 +1,24 @@
 <div id="body">
     <h1>{{ title }}</h1>
     <p>{{ message }}</p>
-    <form [formGroup]="myControl" (submit)="onSubmit()">
+    <form [(formGroup)]="myControl" (ngSubmit)="onSubmit()">
         <table>
             <tr>
                 <th>Name</th>
-                <td><input type="text" formControlName="name"></td>
+                <td><div><input type="text" formControlName="name"></div></td>
             </tr>
             <tr>
                 <th>Mail</th>
-                <td><input type="text" formControlName="mail"></td>
+                <td><div><input type="text" formControlName="mail"></div></td>
             </tr>
             <tr>
                 <th>Age</th>
-                <td><input type="text" formControlName="age"></td>
+                <td><div><input type="number" formControlName="age"></div></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><input type="submit" value="click"></td>
             </tr>
         </table>
-        <div>
-            <label><input type="checkbox" formControlName="control">Check Box</label>
-        </div>
-        <div>
-            <label><input type="radio" value="male" formControlName="control2">male</label>
-            <label><input type="radio" value="female" formControlName="control2">female</label>
-        </div>
-        <select formControlName="control3">
-            <option>Windows</option>
-            <option>macOS</option>
-            <option>Linux</option>
-        </select>
-        <select formControlName="control4" size="5" multiple>
-            <option>android</option>
-            <option>iOS</option>
-            <option>balckberry</option>
-            <option>symbian</option>
-            <option>Fucsia</option>
-        </select>
-        <div>
-            <input type="submit" value="click">
-        </div>
     </form>
 </div> 
