@@ -1,7 +1,42 @@
 <div id="body">
     <h1>{{ title }}</h1>
     <p>{{ message }}</p>
-    <p>TYPE:{{ text1 }}</p>
-    <input type="text" [(formControl)]="myControl" />
-    <button (click)="doClick()">Click</button>
+    <form [formGroup]="myControl" (submit)="onSubmit()">
+        <table>
+            <tr>
+                <th>Name</th>
+                <td><input type="text" formControlName="name"></td>
+            </tr>
+            <tr>
+                <th>Mail</th>
+                <td><input type="text" formControlName="mail"></td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td><input type="text" formControlName="age"></td>
+            </tr>
+        </table>
+        <div>
+            <label><input type="checkbox" formControlName="control">Check Box</label>
+        </div>
+        <div>
+            <label><input type="radio" value="male" formControlName="control2">male</label>
+            <label><input type="radio" value="female" formControlName="control2">female</label>
+        </div>
+        <select formControlName="control3">
+            <option>Windows</option>
+            <option>macOS</option>
+            <option>Linux</option>
+        </select>
+        <select formControlName="control4" size="5" multiple>
+            <option>android</option>
+            <option>iOS</option>
+            <option>balckberry</option>
+            <option>symbian</option>
+            <option>Fucsia</option>
+        </select>
+        <div>
+            <input type="submit" value="click">
+        </div>
+    </form>
 </div> 

@@ -9,7 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class HelloComponent implements OnInit {
   title: string;
   message: string;
-  myControl: FormControl;
+  myControl: FormGroup;
 
   constructor() { 
 
@@ -17,11 +17,20 @@ export class HelloComponent implements OnInit {
 
   ngOnInit() {
     this.title = "Hello-app";
-    this.message = 'FormControlを使う';
-    this.myControl = new FormControl(); 
+    this.message = 'FormGroupを使う';
+    this.myControl = new FormGroup({
+      name: new FormControl(''),
+      mail: new FormControl(''),
+      age: new FormControl(0),
+      control: new FormControl(),
+      control2: new FormControl(),
+      control3: new FormControl(),
+      control4: new FormControl()
+    }); 
   }
 
-  doClick() {
-    this.message = '「' + this.myControl.value + '」と書きましたね。';
+  onSubmit() {
+    let result = this.myControl.value;
+    this.message = JSON.stringify(result);
   }
 }
